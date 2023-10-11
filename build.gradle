@@ -18,3 +18,8 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+tasks.register('apptest', JavaExec) {
+    mainClass = "de.mach.kata.calculator.ApplicationTestFixture"
+    classpath = sourceSets.test.runtimeClasspath
+}
